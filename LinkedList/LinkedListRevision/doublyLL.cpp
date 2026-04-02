@@ -76,7 +76,13 @@ void insertAtMiddle(Node* &head, Node* &tail, int pos, int data){
     store -> prev = newNode;
     
 }
-
+void reverse(Node* tail){
+    while(tail != NULL){
+        cout << tail->data << " ";
+        tail = tail->prev;
+    }
+    cout << endl;
+}
 int getLength(Node* head){
     int cnt = 0;
     Node* temp = head;
@@ -119,6 +125,8 @@ int main(){
     cout << "Length of LL : " << getLength(head) << endl;
     cout << "The head : " << head -> data << endl;
     cout << "The tail : " << tail -> data << endl;
+    cout << "Reversing the LL :   " << endl;
+    reverse(tail);
 
 
 }
